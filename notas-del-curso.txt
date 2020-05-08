@@ -1,0 +1,1 @@
+Este es el cuaderno de notas del curso de Django basico.
