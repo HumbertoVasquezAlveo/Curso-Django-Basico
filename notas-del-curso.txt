@@ -1,1 +1,68 @@
 Este es el cuaderno de notas del curso de Django basico.
+
+clase 5
+creacion del proyecto de plazigram
+setiins = define las configiraciones del proyecto
+urls = punto de entrada para todas las peticiones que llegan añl pruecto esta indexada con su vista correspondiente.
+wsgi = usado en el deployament en produccion.
+manage.py = nunca se toca.
+Vistas = solamente son funciones o clases
+
+
+clase 6
+El Objeto Request
+Dispatch de urls = 
+funciones que responden a una peticion http= Vistas
+URL > Vista >> una url que apunta a una vista.
+
+debugger > import pdb; pdb.set_trace()
+
+"despues de esstar en debugger"
+>
+request 
+request.META > son los header
+request.method > ver que tipo de metodos
+request.GET
+
+
+clase 7
+Pasando argumentos en la URL
+.split >
+json.dumps > transforma un diccionario a json
+
+
+clase 8
+Creacion de la primera App
+python manage.py startapp posts > creando una aplicacion.
+ir a settings, install apas y escribir entre comillas en nombre de App
+
+
+
+clase 9
+Introduccion al Template system
+render > es una funcion que toma un request
+Built-in
+
+template > maneja la logica de como se ven los datos.
+vistas   > maneja la logica que traen los datos.
+
+
+
+clase 10
+Patrones de diseño y Django
+Model,View,Controller
+
+Django usa:
+Model,Template,View.
+script cgi que es!
+
+contoller > maneja la logica del request
+model     > define la estructura de los datos
+View      > como presentar los datos al usuario
+
+MODEL-TEMPLATE-View
+templade > decide como se ven los datos
+model    > define la estructura de los datos
+view     > se encarga de pasarlos los datos al template.
+
+
