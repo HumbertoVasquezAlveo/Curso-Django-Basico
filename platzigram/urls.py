@@ -1,11 +1,18 @@
 """platzigram URL Configuration"""
 
+
+#Django
 from django.urls import path
+from django.contrib import admin 
+
 from platzigram import views as local_views
 from posts import views as posts_views
 
 #llamando las vistas
 urlpatterns = [
+
+    #Django 
+    path('admin/', admin.site.urls),
 
     #local views
     path('hello-word/', local_views.hello_world),

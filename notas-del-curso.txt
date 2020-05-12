@@ -66,3 +66,90 @@ model    > define la estructura de los datos
 view     > se encarga de pasarlos los datos al template.
 
 
+
+Clase 11
+La M en el MTV
+ORM > investigar
+
+models.DateField()        > almacena la fecha
+models.DateTimeField()    > almacena tambien la hora
+
+UUIDField > investigar
+auto_now_add > cuando se creee una instancia en la DB le va a cargar la fecha en que se creo.
+auto_now    > le va acargar la fecha en la que se edito por ultima ves.
+blank > indica vacio
+
+
+Clase 12
+El ORM de Django
+borrar un usuario > humberto.delete()
+
+crear datos instanciando la clase:
+(Instancia de User):
+from posts.models import User > importando el modelo
+lucas = User()
+lucas.email = 'lucas@gmail.com'
+
+querys > traer informacion
+
+traer un objeto > traer un usuario
+user = User.objects.get(email='vayolet@hotmail.com')
+
+
+QUERYSET >
+traer todos los usuarios >
+user_local = User.objects.filter(email__endswith='@gmail.com')  > query para traer solo los @platzi.com
+user = User.objects.all() > traer todos los usuarios
+
+ver quien es is_admin
+for u in user_local:
+    print(u.email, ':', u.is_admin)
+
+cambiando a is_admin
+user_local = User.objects.filter(email__endswith='@gmail.com').update(is_admin)
+
+
+
+
+
+clase 13
+GLOSARIO
+ORM: Object-relational mapping. Es el encargado de permitir
+el acceso y control de una base de datos relacional a través de
+una abstracción a clases y objetos.
+
+Templates: Archivos HTML que permiten la inclusión y ejecución
+de lógica especial para la presentación de datos.
+
+Modelo: Parte de un proyecto de Django que se encarga de estructurar
+las tablas y propiedades de la base de datos a través de clases de Python.
+
+Vista: Parte de un proyecto de Django que se encarga de la
+lógica de negocio y es la conexión entre el template y el modelo.
+
+App: Conjunto de código que se encarga de resolver una parte
+muy específica del proyecto, contiene sus modelos, vistas, urls, etc.
+
+Patrón de diseño: Solución común a un problema particular.
+
+
+
+
+clase 14
+Extendiendo el Modelo de usuario
+
+crear usuario desde el modelo de auth_user >
+from django.contrib.auth.models import User
+u = User.objects.create_user(username='Estefany', password='admin123')
+
+
+
+
+
+
+
+
+
+
+
+
