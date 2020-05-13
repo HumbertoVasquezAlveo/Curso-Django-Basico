@@ -165,6 +165,11 @@ que es costumisar
 clase 16
 Explorando el dashboard de administracion
 
+clase 17
+dashboard de administracion
+editar el detalle >
+
+
 
 
 
