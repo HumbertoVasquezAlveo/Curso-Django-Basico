@@ -144,6 +144,26 @@ u = User.objects.create_user(username='Estefany', password='admin123')
 
 
 
+Clase 15
+Implementacion del modelo de usuario de Platzigram
+
+Las opciones que Django propone para implementar Usuarios personalizados son:
+Usando el Modelo proxy
+Extendiendo la clase abstracta de Usuario existente
+La opción OneToOneField restringe la posibilidad de tener perfiles duplicados.
+Django no guarda archivos de imagen en la base de datos sino la referencia de su ubicación.
+
+INVESTIGAR >>
+Modelos Proxy >
+Modelos Abstractos "heredar del modelo abstracto">
+que son las relaciones en DB
+Que es > OneToOneField()
+que es costumisar
+
+
+
+clase 16
+Explorando el dashboard de administracion
 
 
 
