@@ -2,14 +2,16 @@
 
 #Django
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 #Models
+from django.contrib.auth.models import User
 from users.models import Profile
 
 # Register your models here.
 # Agreganddo el Profile al admin de Django
 #admin.site.register(Profile)
-@admin.register(Profile)
+@admin.register(Profile)   # = decorador para registrarlo.
 class ProfileAdmin(admin.ModelAdmin):
     """ Profile admin."""
     
@@ -37,10 +39,59 @@ class ProfileAdmin(admin.ModelAdmin):
                    'user__is_staff'
                    
     )
+    #listar de los detalles de perfiles
+    #añadiendo las categorias al change profile
+    fieldsets = (
+        ('profile', {
+            'fields':(('user','picture'),), # de esta manera agrupamos en una sola fila.Tupla dentro de tupla
+        }),
+        
+        ('Extra info',{
+            'fields':(
+                ('website','phone_number'),
+                ('bigoraphy')
+            )
+        }),
+        
+        ('Metadata', {
+            'fields':(('created','modified'),),
+        })
+    )
+    
+    #agregando la fecha de creacion y modificacion.
+    readonly_fields = ('created','modified')
+    
+#agregando el Profile al User
+class ProfileInline(admin.StackedInline):
+    """ Profile in-line admin for users. """
+    
+    model = Profile
+    can_delete = False
+    verbose_name_plural = 'profiles'
+    
+class UserAdmin(BaseUserAdmin):
+    """ Add profile admin to base user admin. """
+    
+    inlines = (ProfileInline,)
+    #mostrando en el web admin estos items
+    list_display = (
+        'username',
+        'email',
+        'first_name',
+        'last_name',
+        'is_active',
+        'is_staff'
+    )
+    
+#registrando el admin  
+admin.site.unregister(User)
+admin.site.register(User, UserAdmin)
+
+    
+    
     
     
     
 
-    
-    
-
+        
+        

@@ -167,7 +167,53 @@ Explorando el dashboard de administracion
 
 clase 17
 dashboard de administracion
-editar el detalle >
+
+PARTES DEL CAPITULO
+agregar el admin al profile>
+editar el detalle  >
+Aadmin.StackInline >
+
+CORREGIR
+!!!Ver por que al borrar la base de datos y las migreaciones todo sigue igual!!
+
+INVESTIGAR
+que son los fieldsets >
+que son los fields    > 
+readonly_fields       > el objeto no se puede editar
+como extender el modelo de usuario >
+
+
+
+clase 18
+Creacion del Modelo de Post 
+PARTES DEL CAPITULO
+ARCHIVOS ESTATICOS
+
+clase 19
+Login
+
+session_meddelwere
+
+
+
+
+
+
+
+
+
+CORREGIR
+
+
+
+
+
+
+
+
+
+INVESTIGAR
+
 
 
 
