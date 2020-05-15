@@ -189,30 +189,30 @@ Creacion del Modelo de Post
 PARTES DEL CAPITULO
 ARCHIVOS ESTATICOS
 
-clase 19
+clase 20
 Login
 
+PARTES DE LA CLASE
 session_meddelwere
-
-
-
-
-
-
-
-
+proceso > url > vista
+action  >
+login_requerid
 
 CORREGIR
 
-
-
-
-
-
-
-
-
 INVESTIGAR
+renderiar un template
+
+
+
+clase 21
+logout
+
+clase 22
+Middlewares
+si el usuario no tiene una foto de perfil no podra usar la plataforma
+
+
 
 
 

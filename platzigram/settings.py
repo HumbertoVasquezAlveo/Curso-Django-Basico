@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 ]
 
+#instalando los middleware
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -52,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #instalando el update de profile.
+    'platzigram.middleware.ProfileCompletionMiddleware'
 ]
 
 ROOT_URLCONF = 'platzigram.urls'
@@ -137,3 +140,6 @@ STATICFILES_FINDERS = [
 #Declarando la configuracion del PATH DE LOS MEDIAS
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL  = '/media/'
+
+LOGIN_URL = '/users/login/'
+
