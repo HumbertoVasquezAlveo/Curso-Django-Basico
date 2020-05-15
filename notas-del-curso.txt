@@ -211,6 +211,45 @@ logout
 clase 22
 Middlewares
 si el usuario no tiene una foto de perfil no podra usar la plataforma
+framework of hooks
+
+
+
+
+clase 24
+formularios en Django
+La clase utilitaria para formularios de Django nos ayuda a resolver mucho del trabajo que se realiza de forma repetitiva. La forma de implementarla es muy similar a la implementación de la clase models.model.
+
+Algunas de las clases disponibles en Django al implementar form, son:
+
+BooleanField
+CharField
+ChoiceField
+TypedChoiceField
+DateField
+DateTimeField
+DecimalField
+EmailField
+FileField
+ImageField"
+
+
+Clase 25
+Mostrando el form en el template
+xisten diferentes formas en las que se pueden mostrar los valores del form, estas son: as_table, as_p y as_ul.
+ También se pueden mostrar campos de manera individual, incluso customizar las clases que se van a usar
+  para mostrar los errores, etc. Refinaremos la apariencia del form a través de algunas refactorizaciones
+  en el template.
+
+Se añadieron las validaciones producidad por errores
+
+clase 26
+Models Forms 
+ModelForm es una manera más sencilla de crear formularios en Django y en el caso de nuestro proyecto,
+ se adapta mucho mejor al modelo que ya tenemos.
+Lo usaremos para crear el formulario de posts.
+
+Aprovecharemos para refinar la funcionalidad en el navbar y conectar el feed con los posts.
 
 
 

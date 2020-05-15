@@ -6,6 +6,9 @@ from django.urls import reverse
 
 # Models 
 
+# Este middleware que cuando no tengamos un perfil listo no iba 
+# a redireccionar a update profile.
+
 class ProfileCompletionMiddleware:
     """ Profile completion middleware.
     
@@ -16,14 +19,17 @@ class ProfileCompletionMiddleware:
         """ Middleware initialization. """
         self.get_response = get_response
         
+        # siemppre analizar que tiene el objeto profile
+        # reverse > apartir de un nombre traer la url
     def __call__(self, request):
-        """ code to be executed for each request the view is called."""
+        """Code to be executed for each request before the view is called."""
         if not request.user.is_anonymous:
-            profile = request.user.profile
-            if not profile.picture or not profile.biography:
-                if request.path not in [reverse('update_profile'), reverse('logout')]:
-                    return redirect('update_profile')
-        
+            if not request.user.is_staff:
+                profile = request.user.profile
+                if not profile.picture or not profile.bigoraphy:
+                    if request.path not in [reverse('update_profile'), reverse('logout')]:
+                        return redirect('update_profile')
+
         response = self.get_response(request)
         return response
         

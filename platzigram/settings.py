@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     #instalando el update de profile.
-    'platzigram.middleware.ProfileCompletionMiddleware'
+    'platzigram.middleware.ProfileCompletionMiddleware',
 ]
 
 ROOT_URLCONF = 'platzigram.urls'
